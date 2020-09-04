@@ -15,16 +15,38 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
 
-## Framework + Libs
+## Architecture of the FE (circles)
 
--   [React](https://reactjs.org/)
--   [React Router](https://reactrouter.com/)
+1. Frameworks and language
 
-## Application type
+    - JS
+        - A simple site does not need a typescript
+    - [React](https://reactjs.org/)
+        - https://www.jetbrains.com/lp/devecosystem-2019/javascript/
+        - https://www.jetbrains.com/lp/devecosystem-2020/javascript/
+    - [React Router](https://reactrouter.com/)
+        - The most stable and popular library for the react. Can trust.
 
--   SPA (client-side-rendering)
+2. Libraries
+    - Own libraries more preferred. Use popular libraries for difficult elements like charts and players;
+        - [CanvasJs](https://canvasjs.com/);
+        - [react-minimal-pie-chart](https://www.npmjs.com/package/react-minimal-pie-chart)
+        - [react-player](https://www.npmjs.com/package/react-player)
+3. Materials and components;
+    - [Bootstrap css (4.5.2)](https://getbootstrap.com/)
+        - there is no uniqueness rules, we can use the most common styles for the main objects
+4. Rendering model
+    - Multipage + client-side-rendering
+        - Less traffic for mobile devices (only JSON or text);
+        - Few pages, small bundle;
+        - Information site, not an internet shop = less SEO;
+        - Maybe in future - Progressive Web Apps (PWA)
+    - Responsive web design
+        - Sites available from all devices; We need it;
+5. Content
+    - Text, Media
 
-## App Structure
+## App pages
 
 -   Home
     -   Static root page
@@ -41,11 +63,6 @@ Your app is ready to be deployed!
 -   Dashboard
     -   graphics (svg + canvas)
 
-## Notes
-
--   **Content from server** - Dynamic page with server query (mock).
-    We receive content from the server (text format). If error - redirect to the error page;
-
 ## File Structure
 
 -   build
@@ -57,13 +74,3 @@ Your app is ready to be deployed!
     -   pages
     -   index.jsx
     -   index.css
-
-## Libraries
-
--   [Bootstrap css (4.5.2)](https://getbootstrap.com/)
--   jquery-1.11.1
-    -   Added manually into the template just for the demo
--   [CanvasJs](https://canvasjs.com/)
-    -   Added manually into the template just for the demo
--   [react-player](https://www.npmjs.com/package/react-player)
--   [react-minimal-pie-chart](https://www.npmjs.com/package/react-minimal-pie-chart)
